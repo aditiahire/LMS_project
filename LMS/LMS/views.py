@@ -8,7 +8,7 @@ def BASE(request):
 
 
 def HOME(request):
-    category= Categories.objects.all().order_by('id')[0:3]
+    category= Categories.objects.all().order_by('id')[0:5]
     course = Course.objects.filter(status = 'PUBLISH').order_by('-id')
     context = {
         'category': category,
